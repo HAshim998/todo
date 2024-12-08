@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Todo List</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="./list.png" type="image/x-icon" />
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>My Todo List</h1>
+        <button id="theme-toggle" class="theme-toggle">🌙</button>
+      </div>
+      <div class="input-section">
+        <input type="text" id="task-input" placeholder="Add a new task..." />
+        <button onclick="addTask()">Add Task</button>
+      </div>
+      <ul class="todo-list" id="todo-list"></ul>
+      <div class="list-controls">
+        <label class="select-all-container">
+          <input type="checkbox" id="select-all" onclick="toggleSelectAll()" />
+          <span>Select All Tasks 🦇</span>
+        </label>
+        <button
+          id="delete-selected"
+          class="delete-btn batch-delete"
+          onclick="deleteSelected()"
+        >
+          Delete Selected 🗑️
+        </button>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
